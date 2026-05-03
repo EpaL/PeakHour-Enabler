@@ -1,0 +1,22 @@
+.DS_Store
+
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+*.xcscmblueprint
+xcuserdata/
+
+# Swift / tooling
+.build/
+.swiftpm/
+
+# Local build products and archives
+*.app
+*.dSYM
+*.xcarchive
+
+# Historical local/vendor folders that are not used by the app target.
+Assets/
+STPrivilegedTask/
+PeakHour Enabler/STPrivilegedTask/

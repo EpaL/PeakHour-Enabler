@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7E20E03D1ABE968800C32C79 /* SnmpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20E03C1ABE968800C32C79 /* SnmpConfigurator.swift */; };
+		7E7988C91C40B99600F49D0A /* NSString+FindURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7988C81C40B99600F49D0A /* NSString+FindURLs.swift */; };
+		7E8A212F292FEA27004A68B6 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A212E292FEA27004A68B6 /* STPrivilegedTask.m */; };
+		7E9B71171AC7A9DD006DCB8D /* ProcessInformation_Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B71161AC7A9DD006DCB8D /* ProcessInformation_Objc.m */; };
+		7E9B711A1AC7ABD3006DCB8D /* ProcessInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B71191AC7ABD3006DCB8D /* ProcessInformation.swift */; };
+		7EC6A8261AC612C800D20A27 /* NetworkInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A8251AC612C800D20A27 /* NetworkInformation.swift */; };
+		7EC6A82A1AC6146100D20A27 /* NetworkInformation_Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A8291AC6146100D20A27 /* NetworkInformation_Objc.m */; };
+		7ED570D91A99F67800E87F60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED570D81A99F67800E87F60 /* Images.xcassets */; };
+		7EFAA8881C3FAA0B001B4EAF /* NSTextView+DetectAndAddClicks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFAA8871C3FAA0B001B4EAF /* NSTextView+DetectAndAddClicks.swift */; };
+		7EFAA88B1C3FABD5001B4EAF /* NSAttributedString+Hyperlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFAA88A1C3FABD5001B4EAF /* NSAttributedString+Hyperlink.swift */; };
+		7EFACD3C1F05A93F00319F6A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFACD3B1F05A93F00319F6A /* StringExtensions.swift */; };
+		AA00000100000001AAAAAAAA /* PeakHourEnablerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000100000002AAAAAAAA /* PeakHourEnablerApp.swift */; };
+		AA00000100000003AAAAAAAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000100000004AAAAAAAA /* ContentView.swift */; };
+		AA00000100000005AAAAAAAA /* MacModelIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000100000006AAAAAAAA /* MacModelIcon.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7E20E03C1ABE968800C32C79 /* SnmpConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnmpConfigurator.swift; sourceTree = "<group>"; };
+		7E2CB1421E170DC800034705 /* PeakHour Enabler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PeakHour Enabler.entitlements"; sourceTree = "<group>"; };
+		7E7988C81C40B99600F49D0A /* NSString+FindURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+FindURLs.swift"; sourceTree = "<group>"; };
+		7E8A212D292FEA23004A68B6 /* STPrivilegedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
+		7E8A212E292FEA27004A68B6 /* STPrivilegedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
+		7E9B71151AC7A9DD006DCB8D /* ProcessInformation_Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessInformation_Objc.h; sourceTree = "<group>"; };
+		7E9B71161AC7A9DD006DCB8D /* ProcessInformation_Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessInformation_Objc.m; sourceTree = "<group>"; };
+		7E9B71191AC7ABD3006DCB8D /* ProcessInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInformation.swift; sourceTree = "<group>"; };
+		7EC6A8251AC612C800D20A27 /* NetworkInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInformation.swift; sourceTree = "<group>"; };
+		7EC6A8271AC6146100D20A27 /* PeakHour Enabler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeakHour Enabler-Bridging-Header.h"; sourceTree = "<group>"; };
+		7EC6A8281AC6146100D20A27 /* NetworkInformation_Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInformation_Objc.h; sourceTree = "<group>"; };
+		7EC6A8291AC6146100D20A27 /* NetworkInformation_Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInformation_Objc.m; sourceTree = "<group>"; };
+		7ED570CF1A99F67800E87F60 /* PeakHour Enabler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PeakHour Enabler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ED570D31A99F67800E87F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ED570D81A99F67800E87F60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7ED570E61A99F67800E87F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ED570E71A99F67800E87F60 /* PeakHour_EnablerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakHour_EnablerTests.swift; sourceTree = "<group>"; };
+		7EFAA8871C3FAA0B001B4EAF /* NSTextView+DetectAndAddClicks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextView+DetectAndAddClicks.swift"; sourceTree = "<group>"; };
+		7EFAA88A1C3FABD5001B4EAF /* NSAttributedString+Hyperlink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Hyperlink.swift"; sourceTree = "<group>"; };
+		7EFACD3B1F05A93F00319F6A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		AA00000100000002AAAAAAAA /* PeakHourEnablerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakHourEnablerApp.swift; sourceTree = "<group>"; };
+		AA00000100000004AAAAAAAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA00000100000006AAAAAAAA /* MacModelIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacModelIcon.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7ED570CC1A99F67800E87F60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E9B71181AC7ABA6006DCB8D /* Objective C */ = {
+			isa = PBXGroup;
+			children = (
+				7E8A212D292FEA23004A68B6 /* STPrivilegedTask.h */,
+				7E8A212E292FEA27004A68B6 /* STPrivilegedTask.m */,
+				7EC6A8281AC6146100D20A27 /* NetworkInformation_Objc.h */,
+				7EC6A8291AC6146100D20A27 /* NetworkInformation_Objc.m */,
+				7E9B71151AC7A9DD006DCB8D /* ProcessInformation_Objc.h */,
+				7E9B71161AC7A9DD006DCB8D /* ProcessInformation_Objc.m */,
+				7EC6A8271AC6146100D20A27 /* PeakHour Enabler-Bridging-Header.h */,
+			);
+			name = "Objective C";
+			sourceTree = "<group>";
+		};
+		7ED570C61A99F67800E87F60 = {
+			isa = PBXGroup;
+			children = (
+				7ED570D11A99F67800E87F60 /* PeakHour Enabler */,
+				7ED570E41A99F67800E87F60 /* PeakHour EnablerTests */,
+				7ED570D01A99F67800E87F60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7ED570D01A99F67800E87F60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7ED570CF1A99F67800E87F60 /* PeakHour Enabler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7ED570D11A99F67800E87F60 /* PeakHour Enabler */ = {
+			isa = PBXGroup;
+			children = (
+				7E2CB1421E170DC800034705 /* PeakHour Enabler.entitlements */,
+				AA00000100000002AAAAAAAA /* PeakHourEnablerApp.swift */,
+				AA00000100000004AAAAAAAA /* ContentView.swift */,
+				AA00000100000006AAAAAAAA /* MacModelIcon.swift */,
+				7E20E03C1ABE968800C32C79 /* SnmpConfigurator.swift */,
+				7EC6A8251AC612C800D20A27 /* NetworkInformation.swift */,
+				7E9B71191AC7ABD3006DCB8D /* ProcessInformation.swift */,
+				7EFAA8891C3FABB9001B4EAF /* Extensions */,
+				7E9B71181AC7ABA6006DCB8D /* Objective C */,
+				7ED570D81A99F67800E87F60 /* Images.xcassets */,
+				7ED570D21A99F67800E87F60 /* Supporting Files */,
+			);
+			path = "PeakHour Enabler";
+			sourceTree = "<group>";
+		};
+		7ED570D21A99F67800E87F60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ED570D31A99F67800E87F60 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ED570E41A99F67800E87F60 /* PeakHour EnablerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7ED570E71A99F67800E87F60 /* PeakHour_EnablerTests.swift */,
+				7ED570E51A99F67800E87F60 /* Supporting Files */,
+			);
+			path = "PeakHour EnablerTests";
+			sourceTree = "<group>";
+		};
+		7ED570E51A99F67800E87F60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ED570E61A99F67800E87F60 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EFAA8891C3FABB9001B4EAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7EFAA8871C3FAA0B001B4EAF /* NSTextView+DetectAndAddClicks.swift */,
+				7EFAA88A1C3FABD5001B4EAF /* NSAttributedString+Hyperlink.swift */,
+				7EFACD3B1F05A93F00319F6A /* StringExtensions.swift */,
+				7E7988C81C40B99600F49D0A /* NSString+FindURLs.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7ED570CE1A99F67800E87F60 /* PeakHour Enabler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7ED570EB1A99F67800E87F60 /* Build configuration list for PBXNativeTarget "PeakHour Enabler" */;
+			buildPhases = (
+				7ED570CB1A99F67800E87F60 /* Sources */,
+				7ED570CC1A99F67800E87F60 /* Frameworks */,
+				7ED570CD1A99F67800E87F60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeakHour Enabler";
+			productName = "PeakHour Enabler";
+			productReference = 7ED570CF1A99F67800E87F60 /* PeakHour Enabler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7ED570C71A99F67800E87F60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "Edward Lawford";
+				TargetAttributes = {
+					7ED570CE1A99F67800E87F60 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = SZZFX78PB5;
+						LastSwiftMigration = 0820;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7ED570CA1A99F67800E87F60 /* Build configuration list for PBXProject "PeakHour Enabler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7ED570C61A99F67800E87F60;
+			productRefGroup = 7ED570D01A99F67800E87F60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7ED570CE1A99F67800E87F60 /* PeakHour Enabler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7ED570CD1A99F67800E87F60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ED570D91A99F67800E87F60 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7ED570CB1A99F67800E87F60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EFACD3C1F05A93F00319F6A /* StringExtensions.swift in Sources */,
+				7E9B711A1AC7ABD3006DCB8D /* ProcessInformation.swift in Sources */,
+				7E8A212F292FEA27004A68B6 /* STPrivilegedTask.m in Sources */,
+				7EC6A82A1AC6146100D20A27 /* NetworkInformation_Objc.m in Sources */,
+				7E9B71171AC7A9DD006DCB8D /* ProcessInformation_Objc.m in Sources */,
+				7E7988C91C40B99600F49D0A /* NSString+FindURLs.swift in Sources */,
+				7E20E03D1ABE968800C32C79 /* SnmpConfigurator.swift in Sources */,
+				7EFAA88B1C3FABD5001B4EAF /* NSAttributedString+Hyperlink.swift in Sources */,
+				7EFAA8881C3FAA0B001B4EAF /* NSTextView+DetectAndAddClicks.swift in Sources */,
+				7EC6A8261AC612C800D20A27 /* NetworkInformation.swift in Sources */,
+				AA00000100000001AAAAAAAA /* PeakHourEnablerApp.swift in Sources */,
+				AA00000100000003AAAAAAAA /* ContentView.swift in Sources */,
+				AA00000100000005AAAAAAAA /* MacModelIcon.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7ED570E91A99F67800E87F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7ED570EA1A99F67800E87F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		7ED570EC1A99F67800E87F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "PeakHour Enabler/PeakHour Enabler.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1953;
+				DEVELOPMENT_TEAM = SZZFX78PB5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "PeakHour Enabler/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PeakHour Enabler";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.digitician.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PeakHour Enabler/PeakHour Enabler-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		7ED570ED1A99F67800E87F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "PeakHour Enabler/PeakHour Enabler.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1953;
+				DEVELOPMENT_TEAM = SZZFX78PB5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "PeakHour Enabler/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PeakHour Enabler";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.digitician.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PeakHour Enabler/PeakHour Enabler-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7ED570CA1A99F67800E87F60 /* Build configuration list for PBXProject "PeakHour Enabler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ED570E91A99F67800E87F60 /* Debug */,
+				7ED570EA1A99F67800E87F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7ED570EB1A99F67800E87F60 /* Build configuration list for PBXNativeTarget "PeakHour Enabler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ED570EC1A99F67800E87F60 /* Debug */,
+				7ED570ED1A99F67800E87F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7ED570C71A99F67800E87F60 /* Project object */;
+}
