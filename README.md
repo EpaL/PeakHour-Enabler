@@ -4,6 +4,8 @@ PeakHour Enabler is a small macOS utility that helps configure the built-in `snm
 
 The app is intentionally narrow: it reads the local SNMP configuration, can generate an SNMP community string, enables remote access for the current local network, starts or restarts `snmpd`, and automatically shares this Mac's monitoring configuration with PeakHour via iCloud configuration.
 
+PeakHour Enabler is designed to work with PeakHour, the main macOS Internet performance monitoring app. Learn more about PeakHour at [peakhourapp.com](https://peakhourapp.com/).
+
 ## Requirements
 
 - macOS 14.6 or later for the current Xcode project settings
