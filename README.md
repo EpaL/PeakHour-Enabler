@@ -6,6 +6,12 @@ The app is intentionally narrow: it reads the local SNMP configuration, can gene
 
 PeakHour Enabler is designed to work with PeakHour, the main macOS Internet performance monitoring app. Learn more about PeakHour at [peakhourapp.com](https://peakhourapp.com/).
 
+## Screenshots
+
+| Enable monitoring | Monitoring ready |
+| --- | --- |
+| ![Enable monitoring screen](Documentation/Screenshots/enable-monitoring.png) | ![Monitoring ready screen](Documentation/Screenshots/monitoring-ready.png) |
+
 ## Requirements
 
 - macOS 14.6 or later for the current Xcode project settings
