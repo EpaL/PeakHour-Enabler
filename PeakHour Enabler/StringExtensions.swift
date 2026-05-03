@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import AppKit
 
 extension NSAttributedString {
   
@@ -29,4 +29,3 @@ extension NSAttributedString {
   }
   
 }
-

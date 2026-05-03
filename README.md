@@ -31,7 +31,6 @@ Official PeakHour builds use Digitician signing settings and the PeakHour app gr
 
 ## Notes
 
-- `STPrivilegedTask` is vendored in the app target under `PeakHour Enabler/STPrivilegedTask.{h,m}` and retains its original BSD-style license header.
 - PeakHour and PeakHour Enabler are trademarks of Digitician Inc.
 
 ## License

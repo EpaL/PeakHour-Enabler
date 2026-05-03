@@ -6,7 +6,7 @@
 //  Copyright © 2016 Edward Lawford. All rights reserved.
 //
 
-import Foundation
+import AppKit
 
 extension NSTextView {
   /**

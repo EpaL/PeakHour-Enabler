@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7E20E03D1ABE968800C32C79 /* SnmpConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20E03C1ABE968800C32C79 /* SnmpConfigurator.swift */; };
 		7E7988C91C40B99600F49D0A /* NSString+FindURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7988C81C40B99600F49D0A /* NSString+FindURLs.swift */; };
-		7E8A212F292FEA27004A68B6 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E8A212E292FEA27004A68B6 /* STPrivilegedTask.m */; };
 		7E9B71171AC7A9DD006DCB8D /* ProcessInformation_Objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B71161AC7A9DD006DCB8D /* ProcessInformation_Objc.m */; };
 		7E9B711A1AC7ABD3006DCB8D /* ProcessInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B71191AC7ABD3006DCB8D /* ProcessInformation.swift */; };
 		7EC6A8261AC612C800D20A27 /* NetworkInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC6A8251AC612C800D20A27 /* NetworkInformation.swift */; };
@@ -27,8 +26,6 @@
 		7E20E03C1ABE968800C32C79 /* SnmpConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnmpConfigurator.swift; sourceTree = "<group>"; };
 		7E2CB1421E170DC800034705 /* PeakHour Enabler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PeakHour Enabler.entitlements"; sourceTree = "<group>"; };
 		7E7988C81C40B99600F49D0A /* NSString+FindURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+FindURLs.swift"; sourceTree = "<group>"; };
-		7E8A212D292FEA23004A68B6 /* STPrivilegedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
-		7E8A212E292FEA27004A68B6 /* STPrivilegedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
 		7E9B71151AC7A9DD006DCB8D /* ProcessInformation_Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessInformation_Objc.h; sourceTree = "<group>"; };
 		7E9B71161AC7A9DD006DCB8D /* ProcessInformation_Objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessInformation_Objc.m; sourceTree = "<group>"; };
 		7E9B71191AC7ABD3006DCB8D /* ProcessInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessInformation.swift; sourceTree = "<group>"; };
@@ -63,8 +60,6 @@
 		7E9B71181AC7ABA6006DCB8D /* Objective C */ = {
 			isa = PBXGroup;
 			children = (
-				7E8A212D292FEA23004A68B6 /* STPrivilegedTask.h */,
-				7E8A212E292FEA27004A68B6 /* STPrivilegedTask.m */,
 				7EC6A8281AC6146100D20A27 /* NetworkInformation_Objc.h */,
 				7EC6A8291AC6146100D20A27 /* NetworkInformation_Objc.m */,
 				7E9B71151AC7A9DD006DCB8D /* ProcessInformation_Objc.h */,
@@ -227,7 +222,6 @@
 			files = (
 				7EFACD3C1F05A93F00319F6A /* StringExtensions.swift in Sources */,
 				7E9B711A1AC7ABD3006DCB8D /* ProcessInformation.swift in Sources */,
-				7E8A212F292FEA27004A68B6 /* STPrivilegedTask.m in Sources */,
 				7EC6A82A1AC6146100D20A27 /* NetworkInformation_Objc.m in Sources */,
 				7E9B71171AC7A9DD006DCB8D /* ProcessInformation_Objc.m in Sources */,
 				7E7988C91C40B99600F49D0A /* NSString+FindURLs.swift in Sources */,
