@@ -6,11 +6,33 @@ The app is intentionally narrow: it reads the local SNMP configuration, can gene
 
 PeakHour Enabler is designed to work with PeakHour, the main macOS Internet performance monitoring app. Learn more about PeakHour at [peakhourapp.com](https://peakhourapp.com/).
 
-## Screenshots
+## Usage
 
-| Enable monitoring | Monitoring ready |
-| --- | --- |
-| ![Enable monitoring screen](Documentation/Screenshots/enable-monitoring.png) | ![Monitoring ready screen](Documentation/Screenshots/monitoring-ready.png) |
+### Enable monitoring
+
+On the Mac you want to monitor, open **PeakHour Enabler** and click **Enable Monitoring**. Authenticate with an administrator password when prompted — PeakHour Enabler configures and starts `snmpd` and opens SNMP access to your local network.
+
+![Enable monitoring screen](Documentation/Screenshots/enable-monitoring.png)
+
+- **Advanced Configuration** lets you review or adjust the SNMP settings before enabling.
+- A self-healing **watchdog** re-applies the configuration after macOS updates, so monitoring keeps working.
+
+When you see **This Mac is Ready**, the Mac is configured and will appear in PeakHour's Configuration Assistant on your other Macs.
+
+![Monitoring ready screen](Documentation/Screenshots/monitoring-ready.png)
+
+### Add the Mac in PeakHour
+
+Switch to the Mac running PeakHour and add the enabled Mac with the Bandwidth Configuration Assistant:
+
+- If both Macs share the same **iCloud** account, the enabled Mac appears automatically in the list of discovered devices.
+- Otherwise, expand **SNMP Configuration Details** in PeakHour Enabler to get this Mac's IP address and SNMP community, then choose **Add SNMP Device** in PeakHour and enter them.
+
+For step-by-step instructions on the PeakHour side, see the [Bandwidth Configuration Assistant](https://help.peakhourapp.com/user-guide/configuration-assistant/configuration-assistant-bandwidth/) help page.
+
+### Disable monitoring
+
+Open PeakHour Enabler and click **Disable Monitoring** to stop `snmpd` and remove the shared configuration.
 
 ## Requirements
 
