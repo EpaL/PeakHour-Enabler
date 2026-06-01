@@ -6,6 +6,12 @@ The app is intentionally narrow: it reads the local SNMP configuration, can gene
 
 PeakHour Enabler is designed to work with PeakHour, the main macOS Internet performance monitoring app. Learn more about PeakHour at [peakhourapp.com](https://peakhourapp.com/).
 
+## Download
+
+[![Download the latest release](https://img.shields.io/github/v/release/EpaL/PeakHour-Enabler?label=Download&style=for-the-badge)](https://github.com/EpaL/PeakHour-Enabler/releases/latest)
+
+Grab the latest build from the [**Releases page**](https://github.com/EpaL/PeakHour-Enabler/releases/latest), or [build it from source](#building).
+
 ## Usage
 
 ### Enable monitoring
