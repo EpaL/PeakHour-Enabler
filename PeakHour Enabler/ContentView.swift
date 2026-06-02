@@ -156,8 +156,22 @@ struct ContentView: View {
       // Push footer to bottom
       Spacer(minLength: 20)
 
-      // Footer: iCloud info + Enable button
+      // Footer: error (if any) + iCloud info + Enable button
       VStack(spacing: 12) {
+        if let error = configurator.lastErrorMessage {
+          HStack(alignment: .top, spacing: 8) {
+            Image(systemName: "exclamationmark.triangle.fill")
+              .foregroundColor(.orange)
+            Text(error)
+              .font(.caption)
+              .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+          }
+          .padding(10)
+          .background(Color.orange.opacity(0.15))
+          .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+
         HStack(spacing: 4) {
           Image(systemName: "icloud.fill")
           Text("This Mac will be visible to other PeakHours via iCloud.")
@@ -171,6 +185,7 @@ struct ContentView: View {
           Text("Enable Monitoring")
             .fontWeight(.semibold)
             .frame(maxWidth: .infinity)
+            .padding(.vertical, 8)
         }
         .buttonStyle(.borderedProminent)
         .controlSize(.large)

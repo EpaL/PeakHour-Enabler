@@ -40,6 +40,19 @@ For step-by-step instructions on the PeakHour side, see the [Bandwidth Configura
 
 Open PeakHour Enabler and click **Disable Monitoring** to stop `snmpd` and remove the shared configuration.
 
+## Security and network visibility
+
+While monitoring is **enabled**, this Mac answers SNMP read queries — system information and network‑interface counters — from other devices on your network.
+
+Note that macOS's built‑in `snmpd` does **not enforce the SNMP community string for read access**. The community identifies this Mac to PeakHour, but it does not restrict who can read the data: any device that can reach this Mac's SNMP port (UDP 161) on your network can read its SNMP information while monitoring is enabled, regardless of the community. SNMP here is read‑only, and exposes monitoring data (interface throughput, uptime, system description), not your files or credentials.
+
+The real protections are therefore:
+
+- **It's off until you turn it on.** No SNMP service runs until you click **Enable Monitoring**, and **Disable Monitoring** stops `snmpd` and removes the configuration (including the self‑healing watchdog).
+- **Your local network.** Access is limited to devices that can route to this Mac; a trusted network or a firewall narrows this further.
+
+Recommendation: enable monitoring only on networks you trust, and disable it when you no longer need it.
+
 ## Requirements
 
 - macOS 14.6 or later for the current Xcode project settings

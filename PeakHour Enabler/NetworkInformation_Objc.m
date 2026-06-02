@@ -21,75 +21,80 @@
  * active interface.
  */
 + (NSDictionary *)getActiveNetworkInterfaceInfo_ObjC {
-  SCDynamicStoreRef storeRef = SCDynamicStoreCreate(
-      NULL, (CFStringRef) @"FindCurrentInterfaceIpMac", NULL, NULL);
-  CFPropertyListRef global =
-      SCDynamicStoreCopyValue(storeRef, CFSTR("State:/Network/Global/IPv4"));
-  id primaryInterface =
-      [(__bridge NSDictionary *)global valueForKey:@"PrimaryInterface"];
-
-  if (primaryInterface) {
-    NSString *interfaceState = @"State:/Network/Interface/";
-    interfaceState =
-        [[interfaceState stringByAppendingString:(NSString *)primaryInterface]
-            stringByAppendingString:@"/IPv4"];
-    CFPropertyListRef ipv4 =
-        SCDynamicStoreCopyValue(storeRef, (__bridge CFStringRef)interfaceState);
-    id ipArr = [(__bridge NSDictionary *)ipv4 valueForKey:@"Addresses"];
-    id ip = [ipArr objectAtIndex:0];
-    id netmaskArr = [(__bridge NSDictionary *)ipv4 valueForKey:@"SubnetMasks"];
-    id netmask = [netmaskArr objectAtIndex:0];
-    NSString *netAddress = nil;
-    if (storeRef != nil) {
-      CFRelease(storeRef);
-    }
-    if (ipv4 != nil) {
-      CFRelease(ipv4);
-    }
-    if (global != nil) {
-      CFRelease(global);
-    }
-
-    // Get the subnet address
-
-    if ([ip length] && [netmask length]) {
-      // Strings to in_addr:
-      struct in_addr localAddr;
-      struct in_addr netmaskAddr;
-      struct in_addr netAddr;
-      inet_aton([ip UTF8String], &localAddr);
-      inet_aton([netmask UTF8String], &netmaskAddr);
-
-      // Calculate properties of this local active subnet.
-      // Starting IP: Invert mask (XOR with ones), AND it with IP. Add 1.
-      netAddr.s_addr = (localAddr.s_addr & netmaskAddr.s_addr);
-      netAddress = [NSString stringWithUTF8String:inet_ntoa(netAddr)];
-    }
-
-    // Get the number of bits for the subnet mask
-    if (netmask && netAddress) {
-      struct in_addr netmaskAddr;
-      inet_aton([netmask UTF8String], &netmaskAddr);
-      NSUInteger numberOfBits = [self numberOfBitsSetInMask:netmaskAddr];
-
-      return @{
-        NETWORKINFO_IPADDRESS : ip,
-        NETWORKINFO_SUBNETMASK : netmask,
-        NETWORKINFO_SUBNETBITS :
-            [NSNumber numberWithUnsignedInteger:numberOfBits],
-        NETWORKINFO_NETADDRESS : netAddress,
-        NETWORKINFO_INTERFACENAME : primaryInterface
-      };
-    }
-  }
-
-  return @{
+  // Default result returned whenever the active interface can't be determined.
+  NSDictionary *result = @{
     NETWORKINFO_IPADDRESS : @"",
     NETWORKINFO_SUBNETMASK : @"",
     NETWORKINFO_SUBNETBITS : @0,
     NETWORKINFO_NETADDRESS : @"",
     NETWORKINFO_INTERFACENAME : @""
   };
+
+  SCDynamicStoreRef storeRef = SCDynamicStoreCreate(
+      NULL, (CFStringRef) @"FindCurrentInterfaceIpMac", NULL, NULL);
+  if (storeRef == NULL) {
+    return result;
+  }
+
+  CFPropertyListRef global =
+      SCDynamicStoreCopyValue(storeRef, CFSTR("State:/Network/Global/IPv4"));
+  id primaryInterface =
+      global ? [(__bridge NSDictionary *)global valueForKey:@"PrimaryInterface"] : nil;
+
+  CFPropertyListRef ipv4 = NULL;
+  if ([primaryInterface isKindOfClass:[NSString class]]) {
+    NSString *interfaceState = [NSString
+        stringWithFormat:@"State:/Network/Interface/%@/IPv4", primaryInterface];
+    ipv4 = SCDynamicStoreCopyValue(storeRef, (__bridge CFStringRef)interfaceState);
+    NSDictionary *ipv4Dict = (__bridge NSDictionary *)ipv4;
+    id ipArr = [ipv4Dict valueForKey:@"Addresses"];
+    id netmaskArr = [ipv4Dict valueForKey:@"SubnetMasks"];
+
+    // Guard against a missing or empty Addresses/SubnetMasks array; objectAtIndex:0
+    // on an empty array would throw.
+    if ([ipArr isKindOfClass:[NSArray class]] && [ipArr count] > 0 &&
+        [netmaskArr isKindOfClass:[NSArray class]] && [netmaskArr count] > 0) {
+      NSString *ip = [ipArr objectAtIndex:0];
+      NSString *netmask = [netmaskArr objectAtIndex:0];
+
+      if ([ip length] && [netmask length]) {
+        struct in_addr localAddr;
+        struct in_addr netmaskAddr;
+        struct in_addr netAddr;
+
+        // Only proceed if both strings parse as valid IPv4 addresses.
+        if (inet_aton([ip UTF8String], &localAddr) != 0 &&
+            inet_aton([netmask UTF8String], &netmaskAddr) != 0) {
+          // Network address: IP AND netmask.
+          netAddr.s_addr = (localAddr.s_addr & netmaskAddr.s_addr);
+          NSString *netAddress =
+              [NSString stringWithUTF8String:inet_ntoa(netAddr)];
+          NSUInteger numberOfBits = [self numberOfBitsSetInMask:netmaskAddr];
+
+          if (netAddress) {
+            result = @{
+              NETWORKINFO_IPADDRESS : ip,
+              NETWORKINFO_SUBNETMASK : netmask,
+              NETWORKINFO_SUBNETBITS :
+                  [NSNumber numberWithUnsignedInteger:numberOfBits],
+              NETWORKINFO_NETADDRESS : netAddress,
+              NETWORKINFO_INTERFACENAME : primaryInterface
+            };
+          }
+        }
+      }
+    }
+  }
+
+  if (ipv4 != NULL) {
+    CFRelease(ipv4);
+  }
+  if (global != NULL) {
+    CFRelease(global);
+  }
+  CFRelease(storeRef);
+
+  return result;
 }
 
 /**
